@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/yellow">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/texto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LA TIERRA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/tierra"
+                android:padding="20dp"/>
+
+            <ImageView
+                android:id="@+id/tierra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tierra"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/texto"
+                android:adjustViewBounds="true"/>
+
+            <TextView
+                android:id="@+id/texto2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MARTE"
+                app:layout_constraintTop_toBottomOf="@+id/tierra"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="20dp"
+                />
+
+            <ImageView
+                android:id="@+id/marte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/marte"
+                app:layout_constraintBottom_toTopOf="@id/venus"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/texto2"
+                android:adjustViewBounds="true"
+                />
+
+            <TextView
+                android:id="@+id/texto3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VENUS"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/marte"
+                app:layout_constraintBottom_toTopOf="@+id/venus"
+                android:padding="20dp"
+                />
+
+            <ImageView
+                android:id="@+id/venus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/venus"
+                android:adjustViewBounds="true"
+                app:layout_constraintTop_toBottomOf="@+id/texto3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/texto4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SATURNO"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/venus"
+                app:layout_constraintBottom_toTopOf="@+id/saturno"
+                android:padding="20dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/saturno"
+                android:adjustViewBounds="true"
+                android:id="@+id/saturno"
+                app:layout_constraintTop_toBottomOf="@id/texto4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/space"
+                />
+
+            <Space
+                android:id="@+id/space"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:background="@color/yellow"
+        android:id="@+id/footer">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
